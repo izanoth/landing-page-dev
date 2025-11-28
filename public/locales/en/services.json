@@ -1,0 +1,21 @@
+{
+  "title": "My Services",
+  "serviceList": [
+    {
+      "title": "Web Development",
+      "description": "Crafting modern, responsive, and high-performance web applications using cutting-edge technologies."
+    },
+    {
+      "title": "Mobile App Development",
+      "description": "Building intuitive and feature-rich mobile applications for iOS and Android platforms."
+    },
+    {
+      "title": "Cloud Solutions",
+      "description": "Designing and implementing scalable and secure cloud-native architectures on AWS, Azure, or GCP."
+    },
+    {
+      "title": "API Development",
+      "description": "Developing robust and efficient RESTful APIs to power your applications and integrate diverse systems."
+    }
+  ]
+}

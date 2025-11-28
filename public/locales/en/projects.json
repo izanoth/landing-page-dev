@@ -1,0 +1,26 @@
+{
+  "title": "My Projects",
+  "projectList": [
+    {
+      "title": "E-commerce Platform",
+      "description": "A full-stack e-commerce solution with user authentication, product catalog, shopping cart, and payment gateway integration.",
+      "imageUrl": "/img/project-ecommerce.png",
+      "projectUrl": "#",
+      "tags": ["Next.js", "React", "TypeScript", "Node.js", "MongoDB"]
+    },
+    {
+      "title": "Task Management App",
+      "description": "A responsive web application for managing tasks, with drag-and-drop functionality, due dates, and real-time updates.",
+      "imageUrl": "/img/project-task.png",
+      "projectUrl": "#",
+      "tags": ["React", "Firebase", "Tailwind CSS"]
+    },
+    {
+      "title": "Portfolio Website",
+      "description": "A personal portfolio website showcasing projects, skills, and contact information, built with modern web technologies.",
+      "imageUrl": "/img/project-portfolio.png",
+      "projectUrl": "#",
+      "tags": ["Next.js", "TypeScript", "Tailwind CSS"]
+    }
+  ]
+}

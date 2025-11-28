@@ -1,0 +1,7 @@
+{
+  "title": "Sobre Mim",
+  "paragraph1": "Olá! Eu sou Ivan Cilento, um desenvolvedor de software apaixonado com talento para construir aplicações robustas e escaláveis. Minha jornada na tecnologia tem sido impulsionada por uma curiosidade constante e um desejo de resolver problemas complexos com soluções elegantes.",
+  "paragraph2": "Eu me especializo em desenvolvimento full-stack, com forte ênfase em frameworks JavaScript modernos como React e Next.js, juntamente com soluções de backend eficientes. Eu prospero em ambientes dinâmicos onde posso aprender continuamente e contribuir para projetos impactantes.",
+  "techStackTitle": "Minhas Tecnologias",
+  "techStackList": "React, Next.js, TypeScript, Node.js, Express, PostgreSQL, MongoDB, Docker, AWS, Git, Tailwind CSS"
+}

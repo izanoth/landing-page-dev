@@ -1,15 +1,18 @@
+'use client';
 import React from 'react';
 import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { useClientTranslation } from '@/lib/i18n/use-client-translation';
 
-const Contact = () => {
+const Contact = ({ lng }: { lng: string }) => {
+  const { t } = useClientTranslation('contact', lng);
   return (
     <section id="contact" className="py-16 md:py-24 bg-background text-foreground">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold mb-12 animate-fade-in-up">
-          Get in Touch
+          {t('title')}
         </h2>
         <p className="text-lg mb-8 animate-fade-in-up animate-delay-200">
-          I'm always open to new opportunities and collaborations. Feel free to reach out!
+          {t('subtitle')}
         </p>
         <div className="flex flex-col items-center gap-6 mb-12 animate-fade-in-up animate-delay-400">
           <a
