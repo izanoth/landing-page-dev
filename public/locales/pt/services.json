@@ -3,19 +3,23 @@
   "serviceList": [
     {
       "title": "Desenvolvimento Web",
-      "description": "Criando aplicações web modernas, responsivas e de alto desempenho utilizando tecnologias de ponta."
+      "description": "Criando aplicações web modernas, responsivas e de alto desempenho utilizando tecnologias de ponta.",
+		"icon": "Code"       
     },
     {
       "title": "Desenvolvimento de Aplicativos Móveis",
-      "description": "Construindo aplicativos móveis intuitivos e ricos em recursos para as plataformas iOS e Android."
+      "description": "Construindo aplicativos móveis intuitivos e ricos em recursos.",
+      "icon": "Smartphone"    
     },
     {
       "title": "Soluções em Nuvem",
-      "description": "Projetando e implementando arquiteturas nativas da nuvem escaláveis e seguras na AWS, Azure ou GCP."
+      "description": "Projetando e implementando arquiteturas nativas da nuvem escaláveis.",
+ 		"icon": "Rocket"        
     },
     {
       "title": "Desenvolvimento de APIs",
-      "description": "Desenvolvendo APIs RESTful robustas e eficientes para alimentar suas aplicações e integrar sistemas diversos."
+      "description": "Desenvolvendo APIs RESTful robustas e eficientes para alimentar suas aplicações e integrar sistemas diversos.",
+  		"icon": "Settings"    
     }
   ]
 }

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { languages } from "@/lib/i18n/settings";
 
-const languages = ["en", "pt"];
 const defaultLng = "pt";
 
 export function proxy(req: NextRequest) {

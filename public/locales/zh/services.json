@@ -1,0 +1,25 @@
+{
+  "title": "我的服务",
+  "serviceList": [
+    {
+      "title": "网站开发",
+      "description": "使用尖端技术打造现代、响应式、高性能的网页应用。",
+      "icon": "Code"
+    },
+    {
+      "title": "移动应用开发",
+      "description": "为 iOS 和 Android 平台构建直观且功能丰富的移动应用程序。",
+      "icon": "Smartphone"
+    },
+    {
+      "title": "云端解决方案",
+      "description": "在 AWS、Azure 或 GCP 上设计并实施可扩展且安全的云原生架构。",
+      "icon": "Rocket"
+    },
+    {
+      "title": "API 开发",
+      "description": "开发强健且高效的 RESTful API，为您的应用提供支持并整合多种系统。",
+      "icon": "Settings"
+    }
+  ]
+}

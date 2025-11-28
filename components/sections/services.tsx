@@ -3,12 +3,21 @@ import React from 'react';
 import ServiceItem from '../ui/service-item';
 import { Code, Smartphone, Rocket, Settings } from 'lucide-react';
 import { useClientTranslation } from '@/lib/i18n/use-client-translation';
+import { useLang } from "@/lib/i18n/context";
 
-const Services = ({ lng }: { lng: string }) => {
+const Services = () => {
+  const { lng } = useLang();
   const { t } = useClientTranslation('services', lng);
   
-  const items = t('servicesList', { returnObjects: true });
+  const items = t('serviceList', { returnObjects: true });
   const services = Array.isArray(items) ? items : [];
+  
+  const iconMap: Record<string, React.ElementType> = {
+	 "Code": Code,
+	 "Smartphone": Smartphone,
+	 "Rocket": Rocket,
+	 "Settings": Settings,
+  };
 
   return (
     <section id="services" className="py-16 md:py-24 bg-background text-foreground">
@@ -20,7 +29,7 @@ const Services = ({ lng }: { lng: string }) => {
           {services.map((service, index) => (
             <ServiceItem
               key={index}
-              icon={service.icon}
+              icon={iconMap[service.icon]}
               title={service.title}
               description={service.description}
             />

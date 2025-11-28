@@ -1,0 +1,7 @@
+{
+  "title": "关于我",
+  "paragraph1": "你好！我是 Ivan Cilento，一名充满热情的软件开发人员，擅长构建健壮且可扩展的应用程序。我的科技之旅源于不断的好奇心，以及用优雅的解决方案解决复杂问题的愿望。",
+  "paragraph2": "我专注于全栈开发，尤其强调现代 JavaScript 框架如 React 和 Next.js，并结合高效的后端解决方案。我在动态环境中茁壮成长，能够持续学习并为有影响力的项目做出贡献。",
+  "techStackTitle": "我的技术栈",
+  "techStackList": "React, Next.js, TypeScript, Node.js, Express, PostgreSQL, MongoDB, Docker, AWS, Git, Tailwind CSS"
+}

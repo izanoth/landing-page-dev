@@ -1,6 +1,6 @@
 // lib/i18n/settings.ts
 
-export const languages = ["en", "pt"] as const;
+export const languages = ["en", "pt", "zh"] as const;
 
 export type Language = (typeof languages)[number];
 

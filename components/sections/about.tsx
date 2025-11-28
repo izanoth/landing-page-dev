@@ -1,8 +1,11 @@
 'use client';
 import React from 'react';
 import { useClientTranslation } from '@/lib/i18n/use-client-translation';
+import { useLang } from "@/lib/i18n/context";
+import Image from "next/image"; 
 
-const About = ({ lng }: { lng: string }) => {
+const About = () => {
+  const { lng } = useLang();
   const { t } = useClientTranslation('about', lng);
   return (
     <section id="about" className="py-16 md:py-24 bg-background text-foreground">
@@ -19,12 +22,18 @@ const About = ({ lng }: { lng: string }) => {
               {t('paragraph2')}
             </p>
           </div>
-          <div className="flex justify-center animate-fade-in-right animate-delay-400">
-            {/* Placeholder for profile image or illustration */}
-            <div className="w-64 h-64 bg-gray-700 rounded-full flex items-center justify-center text-gray-300 text-xl">
-              Profile Image
-            </div>
-          </div>
+			<div className="flex justify-center animate-fade-in-right animate-delay-400">
+			  <div className="w-64 h-64 rounded-full overflow-hidden flex items-center justify-center bg-gray-700">
+			    <Image
+			      src="/img/photo.jpg"
+			      alt="Photo"
+			      width={400}
+			      height={400}
+			      className="object-cover w-full h-full"
+			      priority
+			    />
+			  </div>
+			</div>
         </div>
         <div className="mt-16 text-center animate-fade-in-up animate-delay-600">
           <h3 className="text-2xl font-semibold mb-4">{t('techStackTitle')}</h3>

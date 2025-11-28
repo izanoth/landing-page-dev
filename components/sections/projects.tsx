@@ -2,8 +2,10 @@
 import React from 'react';
 import ProjectCard from '../ui/project-card';
 import { useClientTranslation } from '@/lib/i18n/use-client-translation';
+import { useLang } from "@/lib/i18n/context";
 
-const Projects = ({ lng }: { lng: string }) => {
+const Projects = () => {
+  const { lng } = useLang();
   const { t } = useClientTranslation('projects', lng);
   
   const rawProjects = t('projectList', { returnObjects: true });
@@ -22,7 +24,7 @@ const Projects = ({ lng }: { lng: string }) => {
               title={project.title}
               description={project.description}
               imageUrl={project.imageUrl}
-              projectUrl={project.projectUrl}
+              projectUrl={project?.projectUrl}
               tags={project.tags}
             />
           ))}

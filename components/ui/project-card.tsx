@@ -4,7 +4,7 @@ interface ProjectCardProps {
   title: string;
   description: string;
   imageUrl: string;
-  projectUrl: string;
+  projectUrl?: string;
   tags: string[];
 }
 
@@ -15,18 +15,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   projectUrl,
   tags,
 }) => {
-  return (
-    <a
-      href={projectUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group relative"
-    >
+  const content = (
+    <>
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-indigo-500 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
       <img
         src={imageUrl}
         alt={title}
-        className="w-full h-48 object-cover object-center "
+        className="w-full h-48 object-cover object-center"
       />
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2 text-foreground">{title}</h3>
@@ -42,7 +37,27 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           ))}
         </div>
       </div>
-    </a>
+    </>
+  );
+
+  // Se houver projectUrl, renderiza <a>, senão apenas um <div>
+  if (projectUrl) {
+    return (
+      <a
+        href={projectUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group relative"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <div className="block bg-card rounded-lg overflow-hidden shadow-lg transition-all duration-300 relative">
+      {content}
+    </div>
   );
 };
 

@@ -11,7 +11,6 @@ export function useClientTranslation(ns: string, lng?: string) {
   useEffect(() => {
     if (!lng) return;
 
-    // não mudar idioma aqui — só carregar namespace
     const bundleLoaded = i18n.hasResourceBundle(lng, ns);
     if (bundleLoaded) {
       setReady(true);
@@ -24,7 +23,9 @@ export function useClientTranslation(ns: string, lng?: string) {
         if (!res.ok) throw new Error("404");
 
         const json = await res.json();
-        i18n.addResourceBundle(lng, ns, json, true, true);
+        if(lng) {
+        	i18n.addResourceBundle(lng, ns, json, true, true);
+		  }
         setReady(true);
       } catch (err) {
         console.error(`❌ Failed loading namespace "${ns}"`, err);
@@ -33,7 +34,7 @@ export function useClientTranslation(ns: string, lng?: string) {
     }
 
     load();
-  }, [lng, ns]); // NÃO incluir i18n aqui
+  }, [lng, ns]);
 
   return { t, ready, i18n };
 }
