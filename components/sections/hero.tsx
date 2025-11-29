@@ -1,21 +1,15 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useClientTranslation } from '@/lib/i18n/use-client-translation';
 import { useLang } from "@/lib/i18n/context";
 import Loader from '@/components/ui/loader';
+import Image from 'next/image';
 
 const Hero = () => {
   const { lng } = useLang();
-  const { t, ready, i18n } = useClientTranslation("hero", lng);
-  const [loading, setLoading] = useState(true);
+  const { t, ready } = useClientTranslation("hero", lng);
 
-  useEffect(() => {
-    if (ready) {
-      setLoading(false);
-    }
-  }, [ready]);
-
-  if (loading) return <Loader />;
+  if (!ready) return <Loader />;
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-purpleStart via-indigoMid to-blueEnd text-white">
@@ -33,7 +27,7 @@ const Hero = () => {
         </a>
       </div>
       <div className="absolute inset-0 z-0">
-        <img src="/img/hero-banner.png" alt="background" className="w-full h-full grayscale-50 object-cover" />
+        <Image src="/img/hero-banner.png" alt="background" layout="fill" objectFit="cover" className="w-full h-full grayscale-50" />
       </div>
     </section>
   );

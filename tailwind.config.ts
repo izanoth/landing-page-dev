@@ -1,6 +1,9 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: ["class"],
+import type { Config } from 'tailwindcss';
+import tailwindcssAnimate from 'tailwindcss-animate';
+import tailwindcssTextShadow from '@designbycode/tailwindcss-text-shadow';
+
+const config: Config = {
+  darkMode: ["class", "html"],
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -80,6 +83,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require('@designbycode/tailwindcss-text-shadow')],
- 
+  plugins: [tailwindcssAnimate, tailwindcssTextShadow],
 };
+
+export default config;

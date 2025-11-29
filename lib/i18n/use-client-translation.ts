@@ -34,7 +34,7 @@ export function useClientTranslation(ns: string, lng?: string) {
     }
 
     load();
-  }, [lng, ns]);
+  }, [lng, ns, i18n]);
 
   return { t, ready, i18n };
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { IconNode } from 'lucide-react';
 
 interface ServiceItemProps {
   icon: React.ElementType<{

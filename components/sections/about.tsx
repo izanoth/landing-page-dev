@@ -57,7 +57,7 @@ const About = () => {
           >
             <CarouselContent>
               {Object.entries(techStackList).map(([name, src]) => (
-                <CarouselItem key={name} className="md:basis-1/4 lg:basis-1/6 flex flex-col items-center justify-center p-4">
+                <CarouselItem key={name} className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 flex flex-col items-center justify-center p-4">
                   <div className="flex flex-col items-center justify-center h-full">
                     <Image src={src} alt={name} width={48} height={48} className="mb-2" />
                     <span className="text-sm">{name}</span>
@@ -80,7 +80,7 @@ const About = () => {
           >
             <CarouselContent>
               {Object.entries(platformStackList).map(([name, src]) => (
-                <CarouselItem key={name} className="md:basis-1/2 lg:basis-1/3 flex flex-col items-center justify-center p-4">
+                <CarouselItem key={name} className="basis-1/2 sm:basis-1/2 md:basis-1/2 lg:basis-1/3 flex flex-col items-center justify-center p-4">
                   <div className="flex flex-col items-center justify-center h-full">
                     <Image src={src} alt={name} width={48} height={48} className="mb-2" />
                     <span className="text-sm">{name}</span>
