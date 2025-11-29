@@ -1,7 +1,26 @@
 {
   "title": "关于我",
-  "paragraph1": "你好！我是 Ivan Cilento，一名充满热情的软件开发人员，擅长构建健壮且可扩展的应用程序。我的科技之旅源于不断的好奇心，以及用优雅的解决方案解决复杂问题的愿望。",
-  "paragraph2": "我专注于全栈开发，尤其强调现代 JavaScript 框架如 React 和 Next.js，并结合高效的后端解决方案。我在动态环境中茁壮成长，能够持续学习并为有影响力的项目做出贡献。",
+  "paragraph1": "你好！我是伊万·奇伦托（Ivan Cilento），一位充满热情的软件开发人员，擅长构建稳健且可扩展的应用程序。我在科技领域的旅程是由持续的好奇心和用优雅的解决方案解决复杂问题的愿望所驱动的。",
+  "paragraph2": "我专注于全栈开发，特别强调现代JavaScript框架，如React和Next.js，并结合高效的后端解决方案。在充满活力的环境中，我能不断学习并为有影响力的项目做出贡献，这让我茁壮成长。",
   "techStackTitle": "我的技术栈",
-  "techStackList": "React, Next.js, TypeScript, Node.js, Express, PostgreSQL, MongoDB, Docker, AWS, Git, Tailwind CSS"
+  "techStackList": {
+    "React": "https://cdn.simpleicons.org/react/1C1E20",
+    "Next.js": "https://cdn.simpleicons.org/nextdotjs/1C1E20",
+    "TypeScript": "https://cdn.simpleicons.org/typescript/1C1E20",
+    "Node.js": "https://cdn.simpleicons.org/nodedotjs/1C1E20",
+    "Express": "https://cdn.simpleicons.org/express/1C1E20",
+    "PostgreSQL": "https://cdn.simpleicons.org/postgresql/1C1E20",
+    "MongoDB": "https://cdn.simpleicons.org/mongodb/1C1E20",
+    "Docker": "https://cdn.simpleicons.org/docker/1C1E20",
+    "AWS": "https://cdn.simpleicons.org/amazonaws/1C1E20",
+    "Git": "https://cdn.simpleicons.org/git/1C1E20",
+    "Tailwind CSS": "https://cdn.simpleicons.org/tailwindcss/1C1E20"
+  },
+  "platformStackTitle": "我使用的平台",
+  "platformStackList": {
+    "Vercel": "https://cdn.simpleicons.org/vercel/1C1E20",
+    "Postman": "https://cdn.simpleicons.org/postman/1C1E20",
+    "Wordpress": "https://cdn.simpleicons.org/wordpress/1C1E20",
+    "WooCommerce": "https://cdn.simpleicons.org/woocommerce/1C1E20"
+  }
 }

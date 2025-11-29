@@ -124,7 +124,7 @@ export default function LanguageSwitcher() {
     const segments = pathname.split("/");
     segments[1] = newLng;
     const newUrl = segments.join("/");
-    router.push(newUrl);
+    router.push(newUrl, { scroll: false });
   }
 
   const baseClass =
