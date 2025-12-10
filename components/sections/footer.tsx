@@ -10,7 +10,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
   
   return (
-    <footer className="py-8 bg-card text-foreground border-t border-border">
+    <footer className="py-8 bg-background text-foreground border-t border-border">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
         <p dangerouslySetInnerHTML={{ __html: t('copyright', { year }) }} />
         <div className="flex gap-4 mt-4 md:mt-0">

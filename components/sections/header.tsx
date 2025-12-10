@@ -4,7 +4,7 @@ import LanguageSwitcher from '@/components/ui/language-switcher';
 
 const Header = () => {
   return (
-    <header className="fixed w-full flex items-center py-4 px-6 bg-white shadow-md z-40">
+	<header className="fixed w-full flex items-center py-4 px-6 bg-white shadow-md z-40">
       {/* Logo centralizada */}
       <div className="sm:flex-grow flex justify-center">
         <Image

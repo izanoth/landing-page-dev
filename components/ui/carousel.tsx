@@ -120,7 +120,12 @@ function Carousel({
     >
       <div
         onKeyDownCapture={handleKeyDown}
-        className={cn("relative", className)}
+        className={cn(
+		    "relative w-full",
+		    "overflow-x-auto overflow-y-hidden touch-pan-x",
+		    "sm:overflow-hidden",
+		    className
+		  )}
         role="region"
         aria-roledescription="carousel"
         data-slot="carousel"
@@ -138,7 +143,7 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       ref={carouselRef}
-      className="overflow-hidden"
+      className="w-full sm:overflow-hidden"
       data-slot="carousel-content"
     >
       <div
@@ -162,10 +167,13 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
       aria-roledescription="slide"
       data-slot="carousel-item"
       className={cn(
-        "min-w-0 shrink-0 grow-0 basis-full",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
-        className
-      )}
+	    "shrink-0",
+	    "basis-[70%]",
+	    "sm:basis-1/2",
+	    "lg:basis-1/3",
+	    orientation === "horizontal" ? "pl-4" : "pt-4",
+	    className
+	   )}
       {...props}
     />
   )
@@ -184,13 +192,13 @@ function CarouselPrevious({
       data-slot="carousel-previous"
       variant={variant}
       size={size}
-      className={cn(
-        "absolute size-8 rounded-full",
-        orientation === "horizontal"
-          ? "top-1/2 -left-12 -translate-y-1/2"
-          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
-        className
-      )}
+		className={cn(
+		  "absolute size-8 rounded-full",
+		  orientation === "horizontal"
+		    ? "top-1/2 -translate-y-1/2 left-2 sm:left-4"
+		    : "-top-10 left-1/2 -translate-x-1/2 rotate-90",
+		  className
+		)}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
@@ -214,13 +222,13 @@ function CarouselNext({
       data-slot="carousel-next"
       variant={variant}
       size={size}
-      className={cn(
-        "absolute size-8 rounded-full",
-        orientation === "horizontal"
-          ? "top-1/2 -right-12 -translate-y-1/2"
-          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
-        className
-      )}
+		className={cn(
+		  "absolute size-8 rounded-full",
+		  orientation === "horizontal"
+		    ? "top-1/2 -translate-y-1/2 right-2 sm:right-4"
+		    : "-bottom-10 left-1/2 -translate-x-1/2 rotate-90",
+		  className
+		)}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}

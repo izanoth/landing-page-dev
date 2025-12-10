@@ -78,6 +78,18 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Ivan Pavin Cilento",
+  url: "https://cilento.vercel.app",
+  jobTitle: "Desenvolvedor Full-Stack",
+  sameAs: [
+    "https://github.com/izanoth",
+    "https://linkedin.com/in/icilento",
+  ],
+};
+
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }))
 }
@@ -95,6 +107,10 @@ export default async function RootLayout({
   return (
     <html lang={lng} dir={dir(lng)}>
     	<head>
+    	 <script
+	      type="application/ld+json"
+	      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+	    />
     	</head>
       <body className="bg-background text-foreground font-manrope antialiased">
         <LangProvider initialLng={lng}>
