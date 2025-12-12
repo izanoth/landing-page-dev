@@ -4,20 +4,20 @@
   	 {
       "title": "Portfolio Website",
       "description": "A personal portfolio website showcasing projects, skills, and contact information, built with modern web technologies.",
-      "imageUrl": "/img/project-portfolio.png",
+      "imageName": "project-portfolio.png",
       "projectUrl": "https://zanoth.vercel.app",
       "tags": ["Next.js", "TypeScript", "Tailwind CSS"]
     },
     {
       "title": "E-commerce Platform",
       "description": "A full-stack e-commerce solution with user authentication, product catalog, shopping cart, and payment gateway integration.",
-      "imageUrl": "/img/project-ecommerce.png",
+      "imageName": "project-ecommerce.png",
       "tags": ["Laravel", "Docker", "MySQL"]
     },
     {
       "title": "Task Management App",
       "description": "A responsive web application for managing tasks, with drag-and-drop functionality, due dates, and real-time updates.",
-      "imageUrl": "/img/project-task.png",
+      "imageName": "project-task.png",
       "tags": ["Electron", "React", "Tailwind CSS"]
     }
   ]

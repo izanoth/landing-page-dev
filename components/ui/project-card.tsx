@@ -1,10 +1,12 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
 interface ProjectCardProps {
   title: string;
   description: string;
-  imageUrl: string;
+  imageName: string;
   projectUrl?: string;
   tags: string[];
 }
@@ -12,10 +14,13 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
-  imageUrl,
+  imageName,
   projectUrl,
   tags,
 }) => {
+  const { theme } = useTheme();
+  const imageUrl = `/img/${theme}-theme/${imageName}`;
+
   const content = (
     <>
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-indigo-500 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>

@@ -1,3 +1,4 @@
+import PreloadImages from "@/components/ui/preload-images";
 import type { Metadata } from "next";
 import { dir } from 'i18next'
 import { languages } from "@/lib/i18n/settings";
@@ -6,6 +7,8 @@ import I18nProvider from '@/lib/i18n/provider';
 import "../globals.css";
 import WhatsAppButton from '@/components/ui/whatsapp-button';
 import React from 'react';
+
+import { ThemeProvider } from '@/lib/theme-provider';
 
 const isDev = process.env.NODE_ENV === "development";
 
@@ -105,8 +108,10 @@ export default async function RootLayout({
   const { lng } = resolvedParams;
 
   return (
-    <html lang={lng} dir={dir(lng)}>
+    <html lang={lng} dir={dir(lng)} suppressHydrationWarning>
     	<head>
+       <PreloadImages />
+       <meta name="google-site-verification" content="IeMmJeokz8Lo-qH8IUNTJPpwu5gYxwy24FG9w4a142U" />
     	 <script
 	      type="application/ld+json"
 	      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -114,9 +119,16 @@ export default async function RootLayout({
     	</head>
       <body className="bg-background text-foreground font-manrope antialiased">
         <LangProvider initialLng={lng}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
 	        <I18nProvider>
 	          {children}
 	        </I18nProvider>
+          </ThemeProvider>
         </LangProvider>
         <WhatsAppButton phoneNumber="+551163272784" />
       </body>

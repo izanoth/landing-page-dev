@@ -81,6 +81,10 @@ const config: Config = {
         DEFAULT: '0 2px 4px var(--tw-shadow-color)',
         lg: '0 8px 16px var(--tw-shadow-color)',
       },
+      boxShadow: {
+        'light': '0 35px 60px -15px_rgba(0,0,0,0.3)',
+        'dark': '0 35px 60px -15px rgba(255,255,255,0.3)',
+      }
     },
   },
   plugins: [tailwindcssAnimate, tailwindcssTextShadow],

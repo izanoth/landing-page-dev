@@ -23,7 +23,7 @@ const Projects = () => {
               key={index}
               title={project.title}
               description={project.description}
-              imageUrl={project.imageUrl}
+              imageName={project.imageName}
               projectUrl={project?.projectUrl}
               tags={project.tags}
             />

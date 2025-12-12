@@ -4,21 +4,21 @@
   	 {
       "title": "个人作品集网站",
       "description": "一个展示项目、技能和联系信息的个人作品集网站，使用现代 Web 技术构建。",
-      "imageUrl": "/img/project-portfolio.png",
+      "imageName": "project-portfolio.png",
       "projectUrl": "https://zanoth.vercel.app",
       "tags": ["Next.js", "TypeScript", "Tailwind CSS"]
     },
     {
       "title": "电商平台",
       "description": "一个全栈电商解决方案，包含用户认证、产品目录、购物车和支付网关集成。",
-      "imageUrl": "/img/project-ecommerce.png",
+      "imageName": "project-ecommerce.png",
 
       "tags": ["Laravel", "Docker", "MySQL"]
     },
     {
       "title": "任务管理应用",
       "description": "一个用于管理任务的响应式 Web 应用，具备拖放功能、截止日期和实时更新。",
-      "imageUrl": "/img/project-task.png",
+      "imageName": "project-task.png",
 
       "tags": ["Electron", "React", "Tailwind CSS"]
     }

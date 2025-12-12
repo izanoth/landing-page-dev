@@ -10,10 +10,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useTheme } from 'next-themes';
+import { useMounted } from '@/lib/use-mounted';
 
 const About = () => {
   const { lng } = useLang();
   const { t } = useClientTranslation('about', lng);
+  const { theme } = useTheme();
+  const mounted = useMounted();
 
   const techStackList = t('techStackList', { returnObjects: true }) as Record<string, string>;
   const platformStackList = t('platformStackList', { returnObjects: true }) as Record<string, string>;
@@ -76,7 +80,7 @@ const About = () => {
 				        "
 				      >
 				        <div className="flex flex-col items-center justify-center h-full">
-				          <img src={src} alt={name} className="w-12 h-12 mb-2" />
+				          <img src={src} alt={name} className={`w-12 h-12 mb-2${mounted && theme === 'dark' ? ' filter invert' : ''}`} />
 				          <span className="text-sm">{name}</span>
 				        </div>
 				      </CarouselItem>
@@ -97,7 +101,7 @@ const About = () => {
 	            align: "start",
 	            loop: true,
 	          }}
-	          className="w-full max-w-sm mx-auto"
+				  className="w-full max-w-sm mx-auto"
 	        >
 	          <CarouselContent>
 	            {Object.entries(platformStackList).map(([name, src]) => (
@@ -116,7 +120,7 @@ const About = () => {
 	                  <img
 	                    src={src}
 	                    alt={name}
-	                    className="w-12 h-12 mb-2"
+	                    className={`w-12 h-12 mb-2 ${mounted && theme === 'dark' ? 'filter invert' : ''}`}
 	                  />
 	
 	                  <span className="text-sm">{name}</span>
