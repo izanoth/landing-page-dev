@@ -2,6 +2,7 @@
 .GEMINI
 /.specify/
 /.gemini/
+/_editables/
 # dependencies
 /node_modules
 /.pnp
