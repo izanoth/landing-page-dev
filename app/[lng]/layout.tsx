@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     images: [
       {
-        url: `${siteUrl}/img/logo-horizontal.png`,
+        url: `${siteUrl}/img/dark-theme/logo-horizontal.png`,
         width: 1200,
         height: 630,
         alt: "Ivan Cilento - Software Developer",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Ivan Cilento - Software Developer",
     description:
       "Portfólio profissional do desenvolvedor de software Ivan Cilento, apresentando experiência técnica, projetos, stack de tecnologias e serviços especializados.",
-    images: [`${siteUrl}/img/logo-horizontal.png`],
+    images: [`${siteUrl}/img/dark-theme/logo-horizontal.png`],
   },
 
   robots: {
